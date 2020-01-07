@@ -15,7 +15,8 @@ public class HelloWorldResourceIT {
 
     @Container
     public static ApplicationContainer app = new ApplicationContainer()
-            .withAppContextRoot("/microshed-introduction");
+            .withAppContextRoot("/microshed-introduction")
+            .withReadinessPath("/microshed-introduction/app/hello");
 
     @RESTClient
     public static HelloWorldResource helloWorldResource;
